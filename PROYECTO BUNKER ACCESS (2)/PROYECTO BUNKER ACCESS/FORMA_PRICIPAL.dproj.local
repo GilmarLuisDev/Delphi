@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2026/05/11 16:32:17.000.042,=C:\PROYECTO BUNKER ACCESS\Unit1.pas</Transaction>
+    <Transaction>2026/05/11 16:33:31.000.539,C:\PROYECTO BUNKER ACCESS\Unit1.pas=C:\PROYECTO BUNKER ACCESS\FORMULARIOS\FormaDevice.pas</Transaction>
+    <Transaction>2026/05/11 16:33:31.000.539,C:\PROYECTO BUNKER ACCESS\Unit1.dfm=C:\PROYECTO BUNKER ACCESS\FORMULARIOS\FormaDevice.dfm</Transaction>
+    <Transaction>2026/05/11 16:59:59.000.856,=C:\PROYECTO BUNKER ACCESS\Unit1.pas</Transaction>
+    <Transaction>2026/05/11 17:00:13.000.638,C:\PROYECTO BUNKER ACCESS\FORMULARIOS\FormaAlertas.pas=C:\PROYECTO BUNKER ACCESS\Unit1.pas</Transaction>
+    <Transaction>2026/05/11 17:00:13.000.638,C:\PROYECTO BUNKER ACCESS\FORMULARIOS\FormaAlertas.dfm=C:\PROYECTO BUNKER ACCESS\Unit1.dfm</Transaction>
+    <Transaction>2026/05/11 21:53:00.000.590,=C:\PROYECTO BUNKER ACCESS\Unit1.pas</Transaction>
+    <Transaction>2026/05/11 21:53:15.000.223,C:\PROYECTO BUNKER ACCESS\FORMULARIOS\FormaDirectorio.dfm=C:\PROYECTO BUNKER ACCESS\Unit1.dfm</Transaction>
+    <Transaction>2026/05/11 21:53:15.000.223,C:\PROYECTO BUNKER ACCESS\FORMULARIOS\FormaDirectorio.pas=C:\PROYECTO BUNKER ACCESS\Unit1.pas</Transaction>
+  </Transactions>
+</BorlandProject>
