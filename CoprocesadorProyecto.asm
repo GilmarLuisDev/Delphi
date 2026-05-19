@@ -25,6 +25,9 @@ menu6 DB '[6] (3r-2s)(3r+2s)                            '
 menu7 DB '[7] (a^3+3-a-3a^2)/(a-2)                      '
 menu8 DB '[8] (x^3-27)/(x-3)                            '
 menu9 DB '[9] (3/5)x^2y^3 - (1/10)x^2y^3                '
+menuA DB '[A] DEMO FABS: |a-b|                           '
+menuB DB '[B] DEMO FSQRT: sqrt(x^2+y^2)                  '
+menuC DB '[C] DEMO FSCALE/FCHS: -(a*2^b)                '
 menu0 DB '[0] SALIR                                     '
 menuSel DB 'SELECCIONA OPCION:                            '
 
@@ -84,11 +87,14 @@ MENU_FORM:
     IMP_COLOR menu7,46,0,0,14,15,0EH
     IMP_COLOR menu8,46,0,0,15,15,0EH
     IMP_COLOR menu9,46,0,0,16,15,0EH
-    IMP_COLOR menu0,46,0,0,17,15,0EH
-    IMP_COLOR menuSel,46,0,0,19,15,0FH
+    IMP_COLOR menuA,46,0,0,17,15,0EH
+    IMP_COLOR menuB,46,0,0,18,15,0EH
+    IMP_COLOR menuC,46,0,0,19,15,0EH
+    IMP_COLOR menu0,46,0,0,20,15,0EH
+    IMP_COLOR menuSel,46,0,0,22,15,0FH
 
 TECLA_FORM:
-    CURSOR 19,36,0
+    CURSOR 22,36,0
     RASTREO
     CMP AL,'1'
     JE E1
@@ -108,6 +114,18 @@ TECLA_FORM:
     JE E8
     CMP AL,'9'
     JE E9
+    CMP AL,'A'
+    JE EA
+    CMP AL,'a'
+    JE EA
+    CMP AL,'B'
+    JE EB
+    CMP AL,'b'
+    JE EB
+    CMP AL,'C'
+    JE EC
+    CMP AL,'c'
+    JE EC
     CMP AL,'0'
     JE FIN
     JMP TECLA_FORM
@@ -273,6 +291,37 @@ E8:
     FLD num
     FDIV den
     FSTP resultado
+    JMP MOSTRAR
+
+
+; FABS demo |a-b|
+EA:
+    FLD A
+    FSUB B
+    FABS
+    FSTP resultado
+    JMP MOSTRAR
+
+; FSQRT demo sqrt(x^2+y^2)
+EB:
+    FLD X
+    FMUL X
+    FLD Y
+    FMUL Y
+    FADD
+    FSQRT
+    FSTP resultado
+    JMP MOSTRAR
+
+; FSCALE + FCHS demo  -(a*2^b)
+EC:
+    FLD A
+    FLD B
+    FXCH
+    FSCALE
+    FCHS
+    FSTP resultado
+    FSTP ST(0)
     JMP MOSTRAR
 
 ; (3/5)x^2y^3 - (1/10)x^2y^3
