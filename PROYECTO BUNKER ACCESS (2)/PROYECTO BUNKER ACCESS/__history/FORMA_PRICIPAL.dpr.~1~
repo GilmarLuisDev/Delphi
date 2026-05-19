@@ -1,0 +1,14 @@
+program FORMA_PRICIPAL;
+
+uses
+  Vcl.Forms,
+  FORMA_PRINCIPAL in 'FORMULARIOS\FORMA_PRINCIPAL.pas' {FormaPrincipal};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TFormaPrincipal, FormaPrincipal);
+  Application.Run;
+end.

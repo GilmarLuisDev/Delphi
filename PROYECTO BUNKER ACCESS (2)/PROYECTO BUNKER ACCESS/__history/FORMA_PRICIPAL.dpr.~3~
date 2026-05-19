@@ -1,0 +1,18 @@
+program FORMA_PRICIPAL;
+
+uses
+  Vcl.Forms,
+  FORMA_PRINCIPAL in 'FORMULARIOS\FORMA_PRINCIPAL.pas' {FormaPrincipal},
+  FormaDevices in 'FormaDevices.pas' {Forma_Devices},
+  FormaDevice in 'FORMULARIOS\FormaDevice.pas' {Forma_Device};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TFormaPrincipal, FormaPrincipal);
+  Application.CreateForm(TForma_Devices, Forma_Devices);
+  Application.CreateForm(TForma_Device, Forma_Device);
+  Application.Run;
+end.
