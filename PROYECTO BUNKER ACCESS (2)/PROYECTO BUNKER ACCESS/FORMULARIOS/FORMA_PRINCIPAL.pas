@@ -49,18 +49,27 @@ begin
 end;
 
 procedure TFormaPrincipal.OpenDirectorio(Sender: TObject);
+var
+  F: TForma_Directorio;
 begin
-  TForma_Directorio.Create(Self).Show;
+  F := TForma_Directorio.Create(Self);
+  F.Show;
 end;
 
 procedure TFormaPrincipal.OpenAlertas(Sender: TObject);
+var
+  F: TForma_Alertas;
 begin
-  TForma_Alertas.Create(Self).Show;
+  F := TForma_Alertas.Create(Self);
+  F.Show;
 end;
 
 procedure TFormaPrincipal.OpenDevice(Sender: TObject);
+var
+  F: TForma_Device;
 begin
-  TForma_Device.Create(Self).Show;
+  F := TForma_Device.Create(Self);
+  F.Show;
 end;
 
 end.
