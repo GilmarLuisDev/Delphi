@@ -134,8 +134,8 @@ OP_SQRT:
 OP_SCALE:
     FLD A      ; ST0 = A
     FLD N      ; ST0 = N, ST1 = A
-    FSCALE     ; ST0 = N * 2^A ? (x87 usa ST0*2^int(ST1))
-    FXCH       ; mover A escalada arriba
+    FXCH       ; ST0 = A, ST1 = N
+    FSCALE     ; ST0 = A * 2^int(N)
     FSTP resultado
     FSTP ST(0)
     JMP MOSTRAR
